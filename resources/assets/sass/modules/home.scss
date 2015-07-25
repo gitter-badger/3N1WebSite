@@ -1,0 +1,39 @@
+#cy-home {
+    //
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+
+        small {
+            color: #aaa;
+        }
+    }
+
+    
+
+    //
+    .items-card {
+        .panel {
+            .fa {
+                display: block;
+                font-size: 50px;
+                color: #777;
+            }
+
+            .caption {
+                margin-top: 6px;
+                font-size: 18px;
+            }
+        }
+    }
+
+
+
+    //
+    .panel-description {
+        .caption {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+}
