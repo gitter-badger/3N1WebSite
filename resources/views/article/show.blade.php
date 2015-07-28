@@ -12,6 +12,15 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <span>{{ $article->title }}</span>
+                    @if (Auth::check() && Auth::user()->hasRole('admin'))
+                    <div class="btn-group pull-right">
+                        <a href="{{ route('article.edit', ['id' => $article->id]) }}" class="btn btn-default btn-sm"><i class="fa fa-edit"></i></a>
+                        <a href="javascript:if (confirm('{{ trans('app.Are you sure?') }}')) { $('#form-article-destroy').submit(); }" class="btn btn-default btn-sm"><i class="fa fa-trash"></i></a>
+                    </div>
+                    {!! Form::open(['url' => route('article.destroy', ['id' => $article->id]), 'id' => 'form-article-destroy', 'class' => 'hidden', 'method' => 'delete']) !!}
+                        <button type="submit" class="btn btn-default btn-sm"><i class="fa fa-trash"></i></button>
+                    {!! Form::close() !!}
+                    @endif
                 </div>
                 <div class="panel-body">
                     {!! $article->body !!}
@@ -31,14 +40,7 @@
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    {{ trans('article.Article') }}
-                </div>
-                <div class="panel-body">
-                    {{ trans('article.Enjoy Reading') }}
-                </div>
-            </div>
+            @include('snippets.panel-side')
         </div>
     </div>
 </div>
