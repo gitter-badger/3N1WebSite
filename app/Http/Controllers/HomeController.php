@@ -22,7 +22,6 @@ class HomeController extends Controller {
      */
     public function index()
     {
-        // Data excellent topic @todo
         $assign['topics'] = (new Topic)->getHotContents(10);
         $assign['articles'] = (new Article)->getHotContents(10);
         $assign['blogs'] = (new Blog)->getHotContents(10);
@@ -30,4 +29,13 @@ class HomeController extends Controller {
         return view('homes.index', $assign);
     }
 
+    /**
+     * About page
+     *
+     * @return Response
+     */
+    public function about()
+    {
+        return view('homes.about');
+    }
 }

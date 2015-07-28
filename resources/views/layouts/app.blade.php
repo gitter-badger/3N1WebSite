@@ -38,10 +38,10 @@
 
         <div class="collapse navbar-collapse" id="topNav">
             <ul class="nav navbar-nav">
-                <li class="{{ Request::is('article*') ? 'active' : '' }}"><a href="{{ url('/article') }}">{{ trans('app.Article') }}</a></li>
                 <li class="{{ Request::is('topic*') ? 'active' : '' }}"><a href="{{ url('/topic') }}">{{ trans('app.Topic') }}</a></li>
-                <li class="{{ Request::is('blog*') ? 'active' : '' }}"><a href="{{ url('/blog') }}">{{ trans('app.Blog') }}</a></li>
-                <!-- <li class=""><a href="{{ url('/page/about') }}">{{ trans('app.About') }}</a></li> -->
+                <li class="{{ Request::is('article*') ? 'active' : '' }}"><a href="{{ url('/article') }}">启迪</a></li>
+                <li class="{{ Request::is('blog*') ? 'active' : '' }}"><a href="{{ url('/blog') }}">日志</a></li>
+                <li class="{{ Request::is('about*') ? 'active' : '' }}"><a href="{{ url('/about') }}">关于我们</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
