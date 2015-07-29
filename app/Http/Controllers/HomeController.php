@@ -30,12 +30,12 @@ class HomeController extends Controller {
     }
 
     /**
-     * About page
+     * Zone page
      *
      * @return Response
      */
-    public function about()
+    public function zone()
     {
-        return view('homes.about');
+        return view('homes.zone');
     }
 }
