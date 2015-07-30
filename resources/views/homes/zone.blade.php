@@ -6,7 +6,7 @@
         <div class="row items-card">
             <div class="col-sm-12 section-title">
                 <div class="caption text-center">
-                    Gan+小栈 古城边多元化的青年交流场所
+                    赣+小栈 <small>多元化的青年交流空间</small>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -62,10 +62,10 @@
                         <div class="caption"><i class="fa fa-leaf"></i> 介绍</div>
                         <p>
                             我们在2003年的时候就想要开办一家青年旅舍，两年过去了，现在我们才开始付诸实践 <br>
-                            我们借鉴<a href="http://www.yi-gather.com" target="_blank">一起开工社区</a>、<a href="http://www.youplus.cc" target="_blank">You+青年公寓</a>、<a href="http://site.douban.com/143466/" target="_blank">706青年空间</a>、<a href="http://chekucafe.com" target="_blank">车库咖啡</a>、<a href="http://www.x-lab.tsinghua.edu.cn" target="_blank">清华x-lab</a>的模式，建造一家多元的青年工作学习、生活、交流、休闲的小栈 <br>
+                            我们借鉴<a href="http://www.yi-gather.com" target="_blank">一起开工社区</a>、<a href="http://www.youplus.cc" target="_blank">You+青年公寓</a>、<a href="http://site.douban.com/143466/" target="_blank">706青年空间</a>、<a href="http://chekucafe.com" target="_blank">车库咖啡</a>、<a href="http://www.x-lab.tsinghua.edu.cn" target="_blank">清华x-lab</a>的模式，正在筹建一家多元的青年工作学习、生活、交流、休闲的小栈 <br>
                         </p>
                         <p>
-                            Gan+小栈位于xxx，是一个开放的空间 <br>
+                            Gan+小栈是一个开放的空间(<a class="text-danger">正在筹建，需要你的支持</a>) <br>
                             我们有很多的床铺，可供来赣州游玩或在赣州工作的青年居住 <br>
                             我们有活跃咖啡厅，你可以与朋友一起座座，聊天闲谈 <br>
                             我们有宁静的图书馆，你可以在此看看书或做做工作 <br>

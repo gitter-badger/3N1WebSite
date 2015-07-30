@@ -38,4 +38,14 @@ class HomeController extends Controller {
     {
         return view('homes.zone');
     }
+
+    /**
+     * Contact page
+     *
+     * @return Response
+     */
+    public function contact()
+    {
+         return view('homes.contact');
+    }
 }

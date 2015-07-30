@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>
         @section('title')
-            赣+ | 赣州青年社区
+            「赣+」赣州青年社区
         @show
     </title>
 
@@ -39,9 +39,10 @@
         <div class="collapse navbar-collapse" id="topNav">
             <ul class="nav navbar-nav">
                 <li class="{{ Request::is('topic*') ? 'active' : '' }}"><a href="{{ url('/topic') }}">{{ trans('app.Topic') }}</a></li>
-                <li class="{{ Request::is('article*') ? 'active' : '' }}"><a href="{{ url('/article') }}">启迪</a></li>
+                <li class="{{ Request::is('article*') ? 'active' : '' }}"><a href="{{ url('/article') }}">资讯</a></li>
                 <li class="{{ Request::is('blog*') ? 'active' : '' }}"><a href="{{ url('/blog') }}">日志</a></li>
-                <li class="{{ Request::is('zone*') ? 'active' : '' }}"><a href="{{ url('/zone') }}">Gan+小栈</a></li>
+                <li class="{{ Request::is('zone*') ? 'active' : '' }}"><a href="{{ url('/zone') }}">赣+小栈</a></li>
+                <li class="{{ Request::is('contact*') ? 'active' : '' }}"><a href="{{ url('/contact') }}">联系我们</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
