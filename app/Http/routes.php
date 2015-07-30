@@ -34,4 +34,4 @@ Route::controllers([
 Route::resource('topic', 'TopicController');
 Route::resource('article', 'ArticleController');
 Route::resource('blog', 'BlogController');
-Route::resource('reply', 'ReplyController');
+Route::resource('comment', 'CommentController');
