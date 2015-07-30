@@ -22,9 +22,9 @@ class HomeController extends Controller {
      */
     public function index()
     {
-        $assign['topics'] = (new Topic)->getHotContents(10);
-        $assign['articles'] = (new Article)->getHotContents(10);
-        $assign['blogs'] = (new Blog)->getHotContents(10);
+        $assign['topics'] = (new Topic)->getHotContents(4);
+        $assign['articles'] = (new Article)->getHotContents(6);
+        $assign['blogs'] = (new Blog)->getHotContents(3);
 
         return view('homes.index', $assign);
     }
