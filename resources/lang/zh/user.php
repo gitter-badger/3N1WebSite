@@ -10,6 +10,13 @@ return [
     'Confirm Password'    =>  '重复密码',
     'Remember Me'    =>  '记住我',
     'Forgot Your Password?'    =>  '忘记密码？',
+    'Phone'                     =>      '手机',
+    'Is not a correct phone number'                 =>      '不是一个正确的手机号码',
+    'Please enter the 11-digit phone number'        =>      '请输入11位数的手机号码',
+    'Seed the verification code'                    =>      '发送验证码',
+    'verification code sent successfully'           =>      '发送验证码成功',
+    'verification code sent failed'                 =>      '发送验证码失败',
+    'Verification code'                             =>      '验证码',
 
 
 

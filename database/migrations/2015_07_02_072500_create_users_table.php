@@ -14,9 +14,9 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email')->index();
-            $table->string('phone')->nullable();
-            $table->string('name')->nullable()->index();
+            $table->string('email')->unique()->index();
+            $table->string('phone')->unique()->index()->nullable();
+            $table->string('name')->unique()->index();
             $table->string('password', 60);
             $table->string('remember_token')->nullable();
             $table->boolean('is_banned')->default(false)->index();
