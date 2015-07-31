@@ -12,7 +12,6 @@
 
     <link href="{{ asset('/bowerAssets/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/bowerAssets/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/assets/style/style_old.css') }}" rel="stylesheet">
     <link href="{{ asset('/assets/style/style.css') }}" rel="stylesheet">
     <script src="{{ asset('bowerAssets/jquery/dist/jquery.min.js') }}"></script>
 

@@ -1,12 +1,12 @@
 <!-- Comments -->
-<div class="panel panel-default section-items-reply">
-    <div class="panel-heading">{{ trans('topic.replys') }}</div>
+<div class="panel panel-default" id="section-items-comment">
+    <div class="panel-heading">{{ trans('app.comments') }}</div>
     <div class="panel-body">
         @if (!$entity->comment_count)
             <span>{{ trans('app.No data') }}</span>
         @endif
         @foreach ($entity->comments as $comment)
-            <div class="item-reply">
+            <div class="item-comment">
                 <div class="avatar pull-left">
                     <img src="{{ $comment->author->avatar }}">
                 </div>
@@ -27,7 +27,7 @@
 
 <!-- New Comment -->
 <div class="panel panel-default">
-    <div id="anchor-reply" class="panel-heading">{{ trans('topic.My Reply') }}</div>
+    <div id="anchor-comment" class="panel-heading">{{ trans('app.My comment') }}</div>
     <div class="panel-body">
         @if (Auth::guest())
             <div>

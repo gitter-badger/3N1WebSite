@@ -24,7 +24,7 @@
                         } ?>
                         <li>
                             <span class="pull-right" style="color:#777">
-                                <i class="fa fa-thumbs-o-up"></i> {{ $article->view_count }}
+                                <i class="fa fa-thumbs-o-up"></i> {{ $article->vote_up_count }}
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <i class="fa fa-eye"></i> {{ $article->view_count }}
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

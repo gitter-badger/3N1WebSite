@@ -32,6 +32,9 @@ return [
     'Please'            =>  '请',
     'Share'             =>  '分享',
     'More'              =>  '更多',
+    'comments'          =>  '回复列表',
+    'Comment'           =>  '回复',
+    'My comment'        =>  '我的回复',
 
     'year ago'          =>  ':num年前',
     'month ago'         =>  ':num月前',
