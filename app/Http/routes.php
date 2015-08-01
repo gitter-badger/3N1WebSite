@@ -13,6 +13,7 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 Route::get('home', 'HomeController@index');
+Route::controllers(['home' => 'HomeController']);
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {

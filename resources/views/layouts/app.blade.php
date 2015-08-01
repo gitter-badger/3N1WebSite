@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>
         @section('title')
-            3N1WebSite | Quickly build bbs/blog/cms
+            赣州在线 | 赣州网络社区
         @show
     </title>
 
@@ -32,15 +32,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('/') }}">3N1WebSite</a>
+            <a class="navbar-brand" href="{{ url('/') }}">赣州在线</a>
         </div>
 
         <div class="collapse navbar-collapse" id="topNav">
             <ul class="nav navbar-nav">
                 <li class="{{ Request::is('article*') ? 'active' : '' }}"><a href="{{ url('/article') }}">{{ trans('app.Article') }}</a></li>
                 <li class="{{ Request::is('topic*') ? 'active' : '' }}"><a href="{{ url('/topic') }}">{{ trans('app.Topic') }}</a></li>
-                <li class="{{ Request::is('blog*') ? 'active' : '' }}"><a href="{{ url('/blog') }}">{{ trans('app.Blog') }}</a></li>
-                <!-- <li class=""><a href="{{ url('/page/about') }}">{{ trans('app.About') }}</a></li> -->
+                <li class="{{ Request::is('home/job*') ? 'active' : '' }}"><a href="{{ url('/home/job') }}">工作</a></li>
+                <li class="{{ Request::is('home/house*') ? 'active' : '' }}"><a href="{{ url('/home/house') }}">租房</a></li>
+                <li class="{{ Request::is('home/trade*') ? 'active' : '' }}"><a href="{{ url('/home/trade') }}">交易</a></li>
+                <li class="{{ Request::is('home/tao*') ? 'active' : '' }}"><a href="{{ url('/home/tao') }}">网购</a></li>
+                <li class="{{ Request::is('home/seller*') ? 'active' : '' }}"><a href="{{ url('/home/seller') }}">商家</a></li>
+                <li class="{{ Request::is('home/love*') ? 'active' : '' }}"><a href="{{ url('/home/love') }}">婚恋</a></li>
+                <li class="{{ Request::is('home/more*') ? 'active' : '' }}"><a href="{{ url('/home/more') }}">更多</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

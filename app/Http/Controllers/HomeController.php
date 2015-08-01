@@ -30,4 +30,33 @@ class HomeController extends Controller {
         return view('homes.index', $assign);
     }
 
+    public function getJob()
+    {
+        return view('homes.wait');
+    }
+    public function getHouse()
+    {
+        return view('homes.wait');
+    }
+    public function getTrade()
+    {
+        return view('homes.wait');
+    }
+    public function getTao()
+    {
+        return view('homes.wait');
+    }
+    public function getSeller()
+    {
+        return view('homes.wait');
+    }
+    public function getLove()
+    {
+        return view('homes.wait');
+    }
+    public function getMore()
+    {
+        return view('homes.wait');
+    }
+
 }
