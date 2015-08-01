@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use App\Category, App\Topic, App\Article, App\Blog;
 
 class HomeController extends Controller {
