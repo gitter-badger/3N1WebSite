@@ -71,6 +71,14 @@ class AuthController extends Controller
         $verifyRet = $this->verifyRegisterPhoneCode($request->input('phone'), $request->input('verifyCode'));
         if (!isset($verifyRet['error'])) {
             Auth::login($this->create($request->all()));
+
+            // welcome mail
+            Mail::send('emails.welcome', ['name' => $request->input('name'), 'siteName' => '3N1WebSite', 'siteUrl' => 'http://3n1website.dev4living.com'], function($message)
+            {
+                $message->from(env('WEBSITE_MAIL', ''), env('WEBSITE_MAIL_NAME', ''));
+                $message->to($request->input('phone'), $request->input('name'))->subject('Welcome!');
+            });
+
             return redirect($this->redirectPath());
         } else {
             $messageBag = (new MessageBag)->add('verifyCode', $verifyRet['error']);
