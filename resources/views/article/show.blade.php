@@ -23,7 +23,7 @@
                     @endif
                 </div>
                 <div class="panel-body">
-                    {!! $article->body !!}
+                    {!! nl2br($article->body) !!}
 
                     <hr>
                     <div class="" style="margin-top:-10px">
