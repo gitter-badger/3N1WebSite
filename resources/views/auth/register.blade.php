@@ -62,7 +62,7 @@
                             } else {
                                 // request
                                 $.get('{{ url("/auth/get-register-phone-code") }}', {phoneNumber: phoneNumber}, function(ret) {
-                                    alert("{{ trans('user.verification code seet successfully') }}");
+                                    alert("{{ trans('user.verification code sent successfully') }}");
                                     requestSmsCodeSuccess();
                                 }).fail(function(ret) {
                                     alert("{{ trans('user.verification code sent failed') }}");
