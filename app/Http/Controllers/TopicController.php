@@ -37,7 +37,7 @@ class TopicController extends Controller
     {
         $assign['topics'] = Topic::getTopic(15);
         $assign['categorys'] = (new Category)->getTopic4TopCategorys();
-        return view('topics/index', $assign);
+        return view('topic/index', $assign);
     }
 
     /**
@@ -48,7 +48,7 @@ class TopicController extends Controller
     public function create()
     {
         $assign['nodeCategorys'] = with(new Category)->getTopic4TopCategorys();
-        return view('topics/create', $assign);
+        return view('topic/create', $assign);
     }
 
     /**
@@ -87,7 +87,7 @@ class TopicController extends Controller
         $assign['topic']->view_count = $assign['topic']->view_count + 1;
         $assign['topic']->save();
 
-        return view('topics/show', $assign);
+        return view('topic/show', $assign);
     }
 
     /**
@@ -100,7 +100,7 @@ class TopicController extends Controller
     {
         $assign['topic'] = $this->Topic->findOrFail($id);
         $assign['nodeCategorys'] = with(new Category)->getTopic4TopCategorys();
-        return view('topics.edit', $assign);
+        return view('topic.edit', $assign);
     }
 
     /**

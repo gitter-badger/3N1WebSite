@@ -27,7 +27,7 @@ class HomeController extends Controller {
         $assign['articles'] = (new Article)->getHotContents(10);
         $assign['blogs'] = (new Blog)->getHotContents(10);
 
-        return view('homes.index', $assign);
+        return view('home.index', $assign);
     }
 
 }
