@@ -25,29 +25,59 @@ class CreateCategoriesTable extends Migration
             $table->timestamps();
         });
 
-        Category::create([
-            'name'      =>  'uncategory',
-            'parent_id' =>  0,
-            'type_id'   =>  Category::TYPE_ARTICLE,
-        ]);
+        // Topic
+        $topicCategorys = [
+            '城市'      =>  [
+                '赣州', '章贡', '南康', '上犹', '赣县', '信丰', '大余', '崇义', '安远', '龙南', '定南', '全南', '宁都', '于都', '兴国', '会昌', '寻乌', '石城', '瑞金',
+            ],
+            '事业'      =>  [
+            ],
+            '休闲娱乐'  =>  [
+            ],
+            '运动&活动' =>  [
+            ],
+            '站务'       =>  [
+            ]
+        ];
+        foreach ($topicCategorys as $topCategory => $categorys) {
+            $topCategory = Category::create([
+                'name'      =>      $topCategory,
+                'parent_id' =>      0,
+                'type_id'   =>  Category::TYPE_TOPIC,
+            ]);
+            foreach ($categorys as $category) {
+                Category::create([
+                    'name'      =>  $category,
+                    'parent_id' =>  $topCategory->id,
+                    'type_id'   =>  Category::TYPE_TOPIC,
+                ]);
+            }
+        }
 
-        Category::create([
-            'name'      =>  'uncategory',
-            'parent_id' =>  0,
-            'type_id'   =>  Category::TYPE_BLOG,
-        ]);
 
-        $topicCategory = Category::create([
-            'name'      =>  'uncategory',
-            'parent_id' =>  0,
-            'type_id'   =>  Category::TYPE_TOPIC,
-        ]);
-        Category::create([
-            'name'      =>  'uncategory',
-            'parent_id' =>  $topicCategory->id,
-            'type_id'   =>  Category::TYPE_TOPIC,
-        ]);
 
+
+
+        // Article
+        $articleCategorys = ['赣州', '民生', '政闻', '国内', '国际'];
+        foreach ($articleCategorys as $index => $category) {
+            Category::create([
+                'name'      =>  $category,
+                'type_id'   =>  Category::TYPE_ARTICLE,
+                'parent_id' =>  0,
+            ]);
+        }
+
+
+        // Blog
+        $blogCategorys = ['日志'];
+        foreach ($blogCategorys as $index => $category) {
+            Category::create([
+                'name'      =>  $category,
+                'type_id'   =>  Category::TYPE_BLOG,
+                'parent_id' =>  0,
+            ]);
+        }
     }
 
     /**
