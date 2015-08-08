@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
-use Validator, Input, Auth;
+use Validator, Input, Auth, Mail;
 use Illuminate\Support\MessageBag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -73,11 +73,19 @@ class AuthController extends Controller
             Auth::login($this->create($request->all()));
 
             // welcome mail
-            Mail::send('emails.welcome', ['name' => $request->input('name'), 'siteName' => '3N1WebSite', 'siteUrl' => 'http://3n1website.dev4living.com'], function($message)
-            {
-                $message->from(env('WEBSITE_MAIL', ''), env('WEBSITE_MAIL_NAME', ''));
-                $message->to($request->input('phone'), $request->input('name'))->subject('Welcome!');
-            });
+            Mail::send(
+                'emails.welcome',
+                [
+                    'name' => $request->input('name'),
+                    'siteName' => '3N1WebSite',
+                    'siteUrl' => 'http://3n1website.dev4living.com'
+                ],
+                function($message) {
+                    global $request;
+                    $message->from(env('WEBSITE_MAIL', ''), env('WEBSITE_MAIL_NAME', ''));
+                    $message->to($request->input('email'), $request->input('name'))->subject('Welcome!');
+                }
+            );
 
             return redirect($this->redirectPath());
         } else {

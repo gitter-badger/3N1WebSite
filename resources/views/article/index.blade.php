@@ -51,33 +51,35 @@
 
     <div class="row">
         @foreach ($categorys as $key => $category)
-        <?php if ($key == 4) break; ?>
-        <div class="col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    {{ $category->name }}
-                </div>
-                <div class="panel-body" style="height:192px;">
-                    <ul class="list-unstyled">
-                        @if (!$articles->count())
-                            <li>{{ trans('app.No data') }}</li>
-                        @endif
-                        <?php $articles = $category->getHotContents(); ?>
-                        @foreach ($articles as $key => $article)
-                        <?php if ($key == 8) {
-                            break;
-                        } ?>
-                        <li>
-                            <span class="pull-right" style="color:#777">
-                                {{ getYMD4datetime($article->created_at) }}
-                            </span>
-                            <a href="{{ url('/article', ['id' => $article->id]) }}">{{ $article->title }}</a>
-                        </li>
-                        @endforeach
-                    </ul>
+            <?php if ($key == 4) {
+                break;
+            } ?>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {{ $category->name }}
+                    </div>
+                    <div class="panel-body" style="height:192px;">
+                        <ul class="list-unstyled">
+                            <?php $articles = $category->getHotContents(); ?>
+                            @if (!$articles->count())
+                                <li>{{ trans('app.No data') }}</li>
+                            @endif
+                            @foreach ($articles as $key => $article)
+                                <?php if ($key == 8) {
+                                    break;
+                                } ?>
+                                <li>
+                                    <span class="pull-right" style="color:#777">
+                                        {{ getYMD4datetime($article->created_at) }}
+                                    </span>
+                                    <a href="{{ url('/article', ['id' => $article->id]) }}">{{ $article->title }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
         @endforeach
     </div>
 </div>
