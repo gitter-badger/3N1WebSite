@@ -31,12 +31,16 @@ class CreateCategoriesTable extends Migration
                 '赣州', '章贡', '南康', '上犹', '赣县', '信丰', '大余', '崇义', '安远', '龙南', '定南', '全南', '宁都', '于都', '兴国', '会昌', '寻乌', '石城', '瑞金',
             ],
             '事业'      =>  [
+                '未分类',
             ],
             '休闲娱乐'  =>  [
+                '未分类',
             ],
             '运动&活动' =>  [
+                '未分类',
             ],
             '站务'       =>  [
+                '未分类',
             ]
         ];
         foreach ($topicCategorys as $topCategory => $categorys) {
